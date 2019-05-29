@@ -1,8 +1,8 @@
 module.exports = {
-  "username": process.env.USERNAME || "root",
-  "password": process.env.PASSWORD || "root",
-  "database": process.env.DATABASE || "aimazing",
-  "host": process.env.HOST || "127.0.0.1",
-  "dialect": process.env.DIALECT || "mysql",
-  "secret": process.env.SECRET || "secret"
+  username: process.env.DB_USERNAME || "root",
+  password: process.env.DB_PASSWORD || "root",
+  database: process.env.DB_DATABASE || "aimazing",
+  host: process.env.DB_HOST || "127.0.0.1",
+  dialect: process.env.DB_DIALECT || "mysql",
+  secret: process.env.SECRET || "secret"
 }
