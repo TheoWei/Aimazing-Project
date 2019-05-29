@@ -1,26 +1,8 @@
 module.exports = {
-  "development": {
-    "username": "root",
-    "password": "root",
-    "database": "aimazing",
-    "host": "127.0.0.1",
-    "dialect": "mysql",
-    "secret": "secret"
-  },
-  "test": {
-    "username": "root",
-    "password": "root",
-    "database": "database_test",
-    "host": "127.0.0.1",
-    "dialect": "mysql",
-    "secret": "secret"
-  },
-  "production": {
-    "username": "root",
-    "password": "root",
-    "database": "database_production",
-    "host": "127.0.0.1",
-    "dialect": "mysql",
-    "secret": "secret"
-  }
+  "username": process.env.USERNAME || "root",
+  "password": process.env.PASSWORD || "root",
+  "database": process.env.DATABASE || "aimazing",
+  "host": process.env.HOST || "127.0.0.1",
+  "dialect": process.env.DIALECT || "mysql",
+  "secret": process.env.SECRET || "secret"
 }

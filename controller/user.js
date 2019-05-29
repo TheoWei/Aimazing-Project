@@ -1,6 +1,6 @@
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
-const config = require('../config/config').development;
+const config = require('../config/config');
 const User = require('../models/Users');
 module.exports = {
     signIn: (req, res, next) => {
