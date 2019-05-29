@@ -17,9 +17,9 @@ module.exports = {
                         bcrypt.compare(user_password, result[0].user_password)
                             .then(() => {
                                 const token = jwt.sign({ user_email: result[0].user_email, user_name: result[0].user_name }, config.secret, { expiresIn: '30 days' });                                
-                                res.cookie('token', token, { path: '/index'});
+                                res.cookie('token', token, { path: '/'});
                                 res.cookie('token', token, { path: '/transaction'});
-                                return res.redirect('index');
+                                return res.redirect('/');
                             })
                             .catch(err => res.status(500).json({ message: 'wrong password!', error: err }));
                     })
@@ -28,9 +28,9 @@ module.exports = {
     },
 
     signOut: (req, res, next) => {             
-        res.clearCookie('token', {path: '/index'});
+        res.clearCookie('token', {path: '/'});
         res.clearCookie('token', {path: '/transaction'});
-        res.redirect('/index');
+        res.redirect('/');
     },
 
     signUp: (req, res, next) => {

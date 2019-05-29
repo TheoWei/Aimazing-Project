@@ -9,7 +9,7 @@ const transactionController = require('../controller/transaction');
 
 
 /* GET home page. */
-router.get('/index', indexController.index); 
+router.get('/', indexController.index); 
 router.get('/transaction', indexController.transaction);
 
 router.route('/transactions')

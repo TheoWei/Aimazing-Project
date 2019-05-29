@@ -24,7 +24,7 @@ module.exports = {
                             total_amount: result.product_price * product_quantity
                         })
                             .then(() => {
-                                res.redirect('/index');
+                                res.redirect('/');
                             })
                             .catch((err) => res.status(500).json({ error: 'transaction create fail!' }))
                     });

@@ -30,7 +30,7 @@ module.exports = {
                             })
                                 .then(() => {
                                     console.log(`${store_name} created!`);
-                                    res.redirect('/index');
+                                    res.redirect('/');
                                 })
                                 .catch((err) => res.status(500).json({ error: 'store create fail!' }))
                         }

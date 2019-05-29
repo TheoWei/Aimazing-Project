@@ -29,7 +29,7 @@ module.exports = {
                             })
                                 .then(() => {
                                     console.log(`${product_name} created!`);
-                                    res.redirect('/index');                                    
+                                    res.redirect('/');                                    
                                 })
                                 .catch((err) => res.status(500).json({ error: 'Product create fail!' }))
                         }
@@ -75,4 +75,4 @@ module.exports = {
             .catch((err) => res.status(500).json({ error: 'query condition for delete fail!' }))
     },
 
-}
+} 
